@@ -1,4 +1,4 @@
-<html>
+<!-- <html>
 <head>
 	<script type="text/javascript">
 	try{
@@ -7,6 +7,22 @@
 		console.log("queryString===>",queryString);
 		let inviteCode = queryString.split("=")[1];
 		window.location = "myantskiin://accept-invitation?inviteCode="+inviteCode;
+	}catch(e){
+		console.log("error",e);
+		window.location = "https://myant.ca/";
+	}
+	</script>
+</head>
+<body>
+	<a href = "https://myant.ca/">Please click here to download Myant skiin app</a>
+</body>
+<html> -->
+
+<html>
+<head>
+	<script type="text/javascript">
+	try{
+		location.href = "./redirect_to_app.php"
 	}catch(e){
 		console.log("error",e);
 		window.location = "https://myant.ca/";
