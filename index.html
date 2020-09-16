@@ -1,6 +1,12 @@
 <script>
-	const queryString = window.location.search;
-	console.log(queryString);
-	let inviteCode = queryString.split("=")[1];
-	window.location = "myantskiin://accept-invitation?inviteCode="+inviteCode;
+	try{
+		
+		const queryString = window.location.search;
+		console.log("queryString===>",queryString);
+		let inviteCode = queryString.split("=")[1];
+		window.location = "myantskiin://accept-invitation?inviteCode="+inviteCode;
+	}catch(e){
+		alert("error");
+		window.location = "https://myant.ca/";
+	}
 </script>
