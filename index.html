@@ -6,6 +6,9 @@
 		const queryString = window.location.search;
 		console.log("queryString===>",queryString);
 		let inviteCode = queryString.split("=")[1];
+		
+		setTimeout(function () { window.location = "https://skiin.com/"; }, 25);
+		
 		window.location = "myantskiin://accept-invitation?inviteCode="+inviteCode;
 	}catch(e){
 		console.log("error",e);
